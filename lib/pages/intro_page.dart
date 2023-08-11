@@ -18,8 +18,10 @@ class IntroPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // Shop name
+              // shop name
+
               const SizedBox(height: 10),
+
               Text(
                 'SUSHI MAN',
                 style: GoogleFonts.dmSerifDisplay(
@@ -27,15 +29,20 @@ class IntroPage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+
               // icon
+
               Padding(
                 padding: const EdgeInsets.all(50.0),
                 child: Image.asset(
                   'lib/images/salmon_eggs.png',
                 ),
               ),
+
               // title
+
               const SizedBox(height: 20),
+
               Text(
                 'THE TASTE OF JANAPESE FOOD',
                 style: GoogleFonts.dmSerifDisplay(
@@ -43,8 +50,11 @@ class IntroPage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+
               // subtitle
+
               const SizedBox(height: 10),
+
               Text(
                 'Feel the taste of the most popular Japanese food from anywhere and anytime',
                 style: TextStyle(
@@ -52,9 +62,21 @@ class IntroPage extends StatelessWidget {
                   height: 1.5,
                 ),
               ),
+
               // get started button
+
               const SizedBox(height: 25),
-              const MyButton(text: 'Get started'),
+
+              MyButton(
+                text: 'Get started',
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    '/menupage',
+                  );
+                },
+              ),
+
               const SizedBox(height: 15),
             ],
           ),
